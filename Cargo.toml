@@ -1,0 +1,6 @@
+[package]
+name = "radroots-common"
+version = "0.1.0"
+authors = ["triesap npub1tr33s4tj2le2kk9yzhfphdtss26gyn8kv7savnnjhj794nqp333q8e7grr"]
+license = "AGPLv3"
+edition = "2024"
