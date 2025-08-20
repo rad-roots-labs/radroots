@@ -1,0 +1,18 @@
+[package]
+name = "radroots-core"
+version = "0.1.0"
+authors = ["triesap npub1tr33s4tj2le2kk9yzhfphdtss26gyn8kv7savnnjhj794nqp333q8e7grr"]
+license = "AGPLv3"
+edition = "2021"
+
+[features]
+default = ["std", "serde", "typeshare"]
+std = []
+serde = ["dep:serde", "rust_decimal/serde"]
+typeshare = ["dep:typeshare"]
+
+[dependencies]
+rust_decimal = { version = "1", default-features = false }
+rust_decimal_macros = "1"
+serde = { version = "1", default-features = false, features = ["derive"], optional = true }
+typeshare = { version = "1", optional = true }

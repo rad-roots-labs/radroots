@@ -1,0 +1,18 @@
+[package]
+name = "radroots-events-codec"
+version = "0.1.0"
+authors = ["triesap npub1tr33s4tj2le2kk9yzhfphdtss26gyn8kv7savnnjhj794nqp333q8e7grr"]
+license = "AGPLv3"
+edition = "2021"
+
+[features]
+default = ["std"]
+std = []
+serde = ["dep:serde", "radroots-core/serde", "radroots-events/serde"]
+serde_json = ["serde", "dep:serde_json"]
+
+[dependencies]
+radroots-core = { path = "../core", default-features = false }
+radroots-events = { version = "0.1.0", path = "../events" }
+serde = { version = "1", features = ["derive"], optional = true }
+serde_json = { version = "1", optional = true }
