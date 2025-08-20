@@ -1,0 +1,19 @@
+[package]
+name = "radroots-trade"
+version = "0.1.0"
+authors = ["triesap npub1tr33s4tj2le2kk9yzhfphdtss26gyn8kv7savnnjhj794nqp333q8e7grr"]
+license = "AGPLv3"
+edition = "2021"
+
+[features]
+default = ["std", "serde", "typeshare"]
+std = []
+serde = ["dep:serde", "radroots-core/serde", "radroots-events/serde", "radroots-events-codec/serde"]
+typeshare = ["dep:typeshare"]
+
+[dependencies]
+radroots-core = { path = "../core", default-features = false }
+radroots-events = { path = "../events", default-features = false }
+radroots-events-codec = { path = "../events-codec", default-features = false }
+serde = { version = "1", default-features = false, features = ["derive"], optional = true }
+typeshare = { version = "1", optional = true }
