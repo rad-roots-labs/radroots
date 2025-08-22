@@ -1,9 +1,10 @@
 [package]
 name = "radroots-events"
-version = "0.1.0"
+version.workspace = true
+edition.workspace = true
 authors = ["triesap npub1tr33s4tj2le2kk9yzhfphdtss26gyn8kv7savnnjhj794nqp333q8e7grr"]
-license = "AGPLv3"
-edition = "2021"
+rust-version.workspace = true
+license.workspace = true
 
 [features]
 default = ["std", "serde", "typeshare"]
@@ -12,9 +13,9 @@ serde = ["dep:serde"]
 typeshare = ["dep:typeshare"]
 
 [dependencies]
-radroots-core = { path = "../core", default-features = false, features = ["serde"] }
-serde = { version = "1", default-features = false, features = ["derive"], optional = true }
-typeshare = { version = "1", optional = true }
+radroots-core = { workspace = true, default-features = false, features = ["serde"] }
+serde = { workspace = true, optional = true }
+typeshare = { workspace = true, optional = true }
 
 [dev-dependencies]
-serde_json = "1"
+serde_json = { workspace = true }
