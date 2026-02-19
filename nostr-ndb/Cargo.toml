@@ -24,3 +24,4 @@ tokio = { workspace = true, optional = true, features = ["rt", "sync", "time"] }
 
 [dev-dependencies]
 tokio = { workspace = true, features = ["macros", "rt", "sync", "time"] }
+tempfile = { workspace = true }
