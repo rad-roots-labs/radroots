@@ -36,6 +36,9 @@ version = "0.1.0"
 edition = "2024"
 rust-version = "1.92.0"
 license = "AGPL-3.0"
+repository = "https://github.com/rad-roots-labs/radroots"
+homepage = "https://radroots.org"
+readme = "README.md"
 
 [workspace.dependencies]
 radroots-app-core = { path = "crates/app-core", version = "0.1.0", default-features = false }

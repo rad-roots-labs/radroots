@@ -5,6 +5,11 @@ edition.workspace = true
 authors = ["triesap npub1tr33s4tj2le2kk9yzhfphdtss26gyn8kv7savnnjhj794nqp333q8e7grr"]
 rust-version.workspace = true
 license.workspace = true
+description = "trade listing models and tag mappings for radroots nostr flows"
+repository.workspace = true
+homepage.workspace = true
+documentation = "https://docs.rs/radroots-trade"
+readme.workspace = true
 build = "build.rs"
 
 [features]
