@@ -4,10 +4,10 @@ Wasm SQL bridge primitives for Radroots data layers.
 
 ## Goals
 
-- define stable wasm bridge interfaces for SQL exec, query, and export calls
-- keep bridge transaction helper behavior deterministic across wasm integrations
-- provide a narrow host interop boundary for SQL runtime crates
-- expose reusable wasm SQL bridge primitives for higher-level Radroots crates
+- define stable wasm bridge interfaces for SQL execute, query, export, and transactions
+- keep host interop behavior deterministic across wasm integrations
+- support a narrow integration boundary for SQL runtime crates
+- provide reusable wasm SQL bridge primitives for higher-level Radroots crates
 
 ## License
 
