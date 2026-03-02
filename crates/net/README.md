@@ -6,7 +6,7 @@ Unified networking interface for the Radroots SDK.
 
 - provide a stable network entry surface re-exporting net-core primitives
 - keep network feature wiring deterministic across build targets
-- expose a minimal compatibility layer for network crate consumers
+- expose a minimal integration layer for network crate consumers
 - preserve simple integration points for higher-level Radroots crates
 
 ## License
