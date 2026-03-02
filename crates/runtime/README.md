@@ -1,13 +1,13 @@
 # radroots-runtime
 
-Runtime config, IO, and process helpers for Radroots services and apps.
+Runtime configuration, I/O, and process primitives for Radroots services and apps.
 
 ## Goals
 
-- define stable runtime primitives for config loading, JSON IO, and process wiring
+- define stable runtime interfaces for config loading, JSON I/O, and process wiring
 - keep runtime behavior deterministic across development and production environments
-- provide reusable tracing, signal, and service configuration helpers
-- support CLI-driven runtime entrypoints through feature-gated interfaces
+- support tracing, signal, and service configuration integration surfaces
+- provide reusable runtime primitives for higher-level Radroots crates
 
 ## License
 
