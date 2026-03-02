@@ -1,6 +1,6 @@
 # radroots-replica-db-wasm
 
-Wasm bindings for replica SQL runtime and synchronization interfaces in Radroots data layers.
+Wasm bindings for replica SQL runtime and synchronization interfaces for Radroots data layers.
 
 ## Goals
 
