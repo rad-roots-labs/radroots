@@ -4,10 +4,10 @@ Nostr protocol primitives and adapter interfaces for the Radroots SDK.
 
 ## Goals
 
-- provide stable Nostr types, tags, filters, and parsing helpers
-- support feature-gated client, codec, HTTP, and NIP integration surfaces
+- define stable interfaces for Nostr types, tags, filters, and parsing
 - keep event and identity adapter behavior deterministic across targets
-- expose reusable Nostr primitives for higher-level Radroots crates
+- support feature-gated client, codec, HTTP, and NIP integration surfaces
+- provide reusable Nostr primitives for higher-level Radroots crates
 
 ## License
 
