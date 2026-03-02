@@ -4,10 +4,10 @@ Trade listing models and Nostr tag mappings for the Radroots SDK.
 
 ## Goals
 
-- define listing domain models and invariants for Radroots trade records
-- map listing structs to deterministic Nostr tags and event payloads
+- define stable listing models and invariants for Radroots trade records
+- keep listing-to-tag mapping deterministic across supported targets
 - support feature-gated serialization and type export for SDK consumers
-- provide stable trade primitives for higher-level Radroots crates
+- provide reusable trade primitives for higher-level Radroots crates
 
 ## License
 
