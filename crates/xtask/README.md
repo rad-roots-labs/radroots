@@ -1,11 +1,11 @@
 # xtask
 
-Workspace automation for radroots sdk validation and export operations.
+Workspace automation for Radroots SDK validation and export operations.
 
 ## Goals
 
-- enforce sdk contract consistency across crates
-- generate deterministic sdk export artifacts
+- enforce SDK contract consistency across crates
+- generate deterministic SDK export artifacts
 - preserve stable package and crate mapping rules
 - block release drift before publish operations
 
