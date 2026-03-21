@@ -14,6 +14,7 @@ documentation = "https://docs.rs/radroots-nostr-signer"
 readme.workspace = true
 
 [dependencies]
+hex = { workspace = true }
 nostr = { workspace = true }
 radroots-identity = { workspace = true, default-features = false, features = [
   "std",
@@ -22,7 +23,9 @@ radroots-identity = { workspace = true, default-features = false, features = [
 radroots-nostr-connect = { workspace = true }
 radroots-runtime = { workspace = true }
 serde = { workspace = true, features = ["derive"] }
+sha2 = { workspace = true }
 thiserror = { workspace = true }
+url = { workspace = true }
 uuid = { workspace = true }
 
 [dev-dependencies]
