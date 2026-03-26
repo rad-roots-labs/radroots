@@ -13,6 +13,10 @@ homepage.workspace = true
 documentation = "https://docs.rs/radroots-nostr-signer"
 readme.workspace = true
 
+[features]
+default = []
+native = ["dep:radroots-sql-core", "radroots-sql-core/native"]
+
 [dependencies]
 hex = { workspace = true }
 nostr = { workspace = true }
@@ -22,6 +26,7 @@ radroots-identity = { workspace = true, default-features = false, features = [
 ] }
 radroots-nostr-connect = { workspace = true }
 radroots-runtime = { workspace = true }
+radroots-sql-core = { workspace = true, optional = true }
 serde = { workspace = true, features = ["derive"] }
 sha2 = { workspace = true }
 thiserror = { workspace = true }
@@ -29,6 +34,7 @@ url = { workspace = true }
 uuid = { workspace = true }
 
 [dev-dependencies]
+radroots-sql-core = { workspace = true, features = ["native"] }
 radroots-test-fixtures = { workspace = true }
 serde_json = { workspace = true }
 tempfile = { workspace = true }
