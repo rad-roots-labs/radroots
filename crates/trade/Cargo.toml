@@ -7,7 +7,7 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "trade listing models and tag mappings for radroots nostr flows"
+description = "workflow validation projections and read models for radroots trade flows"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots-trade"
@@ -16,14 +16,18 @@ build = "build.rs"
 
 [features]
 default = ["std", "serde", "serde_json", "ts-rs"]
-std = []
+std = ["radroots-core/std", "radroots-events/std", "radroots-events-codec/std"]
 serde = [
   "dep:serde",
   "radroots-core/serde",
   "radroots-events/serde",
   "radroots-events-codec/serde",
 ]
-serde_json = ["serde", "dep:serde_json"]
+serde_json = [
+  "serde",
+  "dep:serde_json",
+  "radroots-events-codec/serde_json",
+]
 ts-rs = ["dep:ts-rs", "radroots-events/ts-rs", "radroots-events/std"]
 
 [dependencies]
