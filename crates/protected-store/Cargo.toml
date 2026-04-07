@@ -1,0 +1,26 @@
+[package]
+name = "radroots-protected-store"
+version = "0.1.0-alpha.1"
+edition.workspace = true
+authors = [
+  "triesap npub1tr33s4tj2le2kk9yzhfphdtss26gyn8kv7savnnjhj794nqp333q8e7grr",
+]
+rust-version.workspace = true
+license.workspace = true
+description = "versioned authenticated local protected-store envelopes for radroots runtimes"
+repository.workspace = true
+homepage.workspace = true
+documentation = "https://docs.rs/radroots-protected-store"
+readme = "README.md"
+
+[features]
+default = []
+std = ["radroots-secret-vault/std"]
+
+[dependencies]
+chacha20poly1305 = { workspace = true }
+getrandom = { workspace = true }
+radroots-secret-vault = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+zeroize = { workspace = true }
