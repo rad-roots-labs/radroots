@@ -16,5 +16,8 @@ readme = "README.md"
 [features]
 default = []
 std = []
+memory-vault = ["std"]
+os-keyring = ["std", "dep:keyring"]
 
 [dependencies]
+keyring = { workspace = true, optional = true }
