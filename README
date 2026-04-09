@@ -1,0 +1,28 @@
+# »-`-,-
+
+This is the README for `radroots` core libraries, together they constitute a 
+collaborative and composable architecture for authoring agricultural trade records.
+
+## Getting Rad Roots
+
+The preferred method to download `radroots` source code is to use git.
+
+To download `radroots` do the following:
+    
+    git clone --recurse-submodules https://git.radroots.dev/radroots/radroots.git
+
+If you have questions about `radroots` or if you wish to be notified of releases,
+you can browse and/or join the `radroots` mailing list:
+
+    https://radroots.dev/lists/listinfo
+
+Rad Roots is built on Love for the Planet and its People.
+
+## Copyright
+
+Except as otherwise noted, all files in the `radroots` distribution are
+
+    Copyright (c) 2020-2026 Tyson Lupul and others.
+
+For information on usage and redistribution, and for a DISCLAIMER OF ALL
+WARRANTIES, see LICENSE included in the `radroots` distribution.
