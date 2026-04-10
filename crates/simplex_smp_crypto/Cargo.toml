@@ -8,11 +8,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "simplex messaging queue authorization and ratchet state for the radroots sdk"
+description = "SimpleX SMP queue authorization and ratchet cryptography"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_simplex_smp_crypto"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = ["std"]
