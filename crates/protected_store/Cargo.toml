@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "versioned authenticated local protected-store envelopes for radroots runtimes"
+description = "Authenticated store envelopes for protected local records"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_protected_store"
-readme = "README.md"
+readme = "README"
 
 [features]
 default = []
