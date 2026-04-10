@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "wasm sql runtime primitives for radroots data layers"
+description = "WebAssembly SQL runtime facade and execution entry points"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_sql_wasm_core"
-readme.workspace = true
+readme = "README"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
