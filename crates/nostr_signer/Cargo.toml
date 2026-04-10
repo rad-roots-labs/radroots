@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "transport-neutral signer domain models and persistence primitives for the radroots sdk"
+description = "Transport-neutral signer models, policies, and stores"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_nostr_signer"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = []
