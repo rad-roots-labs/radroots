@@ -8,11 +8,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "synthetic fixture and opt-in local-service interop coverage for the radroots SimpleX stack"
+description = "Synthetic SimpleX interop fixtures and roundtrip tests"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_simplex_interop_tests"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = ["std"]
