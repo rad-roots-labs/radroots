@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "offline geocoder queries for radroots geonames datasets"
+description = "Offline geocoder and place lookup queries"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_geocoder"
-readme.workspace = true
+readme = "README"
 
 [dependencies]
 rusqlite = { workspace = true, features = ["bundled", "serialize"] }
