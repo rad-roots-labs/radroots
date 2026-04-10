@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "runtime config, io, and process helpers for radroots services and apps"
+description = "Runtime configuration, secret-file, and service helpers"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_runtime"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = []
