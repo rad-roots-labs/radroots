@@ -1,0 +1,22 @@
+# radroots_net
+
+This is the README for `radroots_net`, which re-exports the unified networking
+facade from `radroots_net_core` for the `radroots` core libraries.
+
+## Overview
+
+ * reexports `radroots_net_core` as the public `core` module;
+ * forwards the `std`, `rt`, and aggregate feature surface used by networking
+   consumers;
+ * adds no additional networking logic beyond the reexport layer;
+ * keeps the workspace-facing network entry point separate from the lower-level
+   implementation crate.
+
+## Copyright
+
+Except as otherwise noted, all files in the `radroots_net` distribution are
+
+ Copyright (c) 2020-2026 Tyson Lupul and others.
+
+For information on usage and redistribution, and for a DISCLAIMER OF ALL
+WARRANTIES, see LICENSE included in the `radroots_net` distribution.
