@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "replica schema models and relational interfaces for radroots data layers"
+description = "Replica database schema models"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_replica_db_schema"
-readme.workspace = true
+readme = "README"
 build = "build.rs"
 
 [lib]
