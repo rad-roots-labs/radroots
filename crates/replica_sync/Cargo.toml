@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "replica event ingest and synchronization interfaces for radroots data layers"
+description = "Replica ingest and synchronization interfaces"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_replica_sync"
-readme.workspace = true
+readme = "README"
 
 [lib]
 crate-type = ["rlib"]
