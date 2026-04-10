@@ -8,11 +8,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "simplex agent protocol envelopes and queue lifecycle types for the radroots sdk"
+description = "SimpleX agent envelopes, queue models, and codecs"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_simplex_agent_proto"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = ["std"]
