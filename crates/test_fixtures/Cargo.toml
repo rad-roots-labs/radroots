@@ -9,3 +9,4 @@ homepage.workspace = true
 readme = "README"
 publish = false
 description = "Deterministic fixture identities and endpoint constants"
+authors = ["Tyson Lupul <tyson@radroots.org>"]
