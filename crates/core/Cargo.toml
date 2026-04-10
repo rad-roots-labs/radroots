@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "core value types and unit semantics for radroots sdk contracts"
+description = "Core value types and unit semantics"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_core"
-readme.workspace = true
+readme = "README"
 build = "build.rs"
 
 [features]
