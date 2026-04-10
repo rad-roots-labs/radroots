@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "replica sql runtime and migration interfaces for radroots data layers"
+description = "Replica SQL runtime interfaces and typed database helpers"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_replica_db"
-readme.workspace = true
+readme = "README"
 
 [lib]
 crate-type = ["rlib"]
