@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "canonical local filesystem path resolution for radroots runtimes"
+description = "Canonical local path resolution for runtime layouts"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_runtime_paths"
-readme = "README.md"
+readme = "README"
 
 [dependencies]
 thiserror = { workspace = true }

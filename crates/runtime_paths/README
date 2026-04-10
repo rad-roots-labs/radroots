@@ -1,0 +1,22 @@
+# radroots_runtime_paths
+
+This is the README for `radroots_runtime_paths`, which provides canonical local
+path resolution for the `radroots` core libraries.
+
+## Overview
+
+ * default file-name and bootstrap-path helpers for local runtime layouts;
+ * platform, host-environment, namespace, and path-profile types for path
+   decisions;
+ * resolver and override types that produce structured `RadrootsPaths` outputs;
+ * legacy-path inspection and migration constants for compatibility handling.
+
+## Copyright
+
+Except as otherwise noted, all files in the `radroots_runtime_paths`
+distribution are
+
+ Copyright (c) 2020-2026 Tyson Lupul and others.
+
+For information on usage and redistribution, and for a DISCLAIMER OF ALL
+WARRANTIES, see LICENSE included in the `radroots_runtime_paths` distribution.
