@@ -3,9 +3,7 @@ name = "radroots_simplex_smp_crypto"
 publish = false
 version = "0.1.0-alpha.1"
 edition.workspace = true
-authors = [
-  "triesap npub1tr33s4tj2le2kk9yzhfphdtss26gyn8kv7savnnjhj794nqp333q8e7grr",
-]
+authors = ["Tyson Lupul <tyson@radroots.org>"]
 rust-version.workspace = true
 license.workspace = true
 description = "SimpleX SMP queue authorization and ratchet cryptography"
