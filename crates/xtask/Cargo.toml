@@ -3,6 +3,8 @@ name = "xtask"
 version = "0.1.0-alpha.1"
 edition.workspace = true
 rust-version.workspace = true
+description = "Internal workspace automation tasks"
+readme = "README"
 license.workspace = true
 publish = false
 

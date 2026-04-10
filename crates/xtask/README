@@ -1,0 +1,24 @@
+# xtask
+
+This is the README for `xtask`, which provides internal workspace automation
+tasks for the `radroots` core libraries.
+
+## Overview
+
+ * an internal `cargo xtask` runner for workspace-oriented development and
+   release workflows;
+ * `sdk` subcommands that export TypeScript bundles, crate models, and related
+   artifacts;
+ * command-dispatch code used for manifest, contract, and artifact generation
+   paths inside the workspace;
+ * a non-published binary crate used as tooling rather than as a library
+   dependency.
+
+## Copyright
+
+Except as otherwise noted, all files in the `xtask` distribution are
+
+ Copyright (c) 2020-2026 Tyson Lupul and others.
+
+For information on usage and redistribution, and for a DISCLAIMER OF ALL
+WARRANTIES, see LICENSE included in the `xtask` distribution.

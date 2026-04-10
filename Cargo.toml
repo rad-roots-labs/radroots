@@ -52,7 +52,7 @@ rust-version = "1.92.0"
 license = "AGPL-3.0"
 repository = "https://github.com/rad-roots-labs/radroots"
 homepage = "https://radroots.org"
-readme = "README.md"
+readme = "README"
 
 [workspace.dependencies]
 radroots_core = { path = "crates/core", version = "0.1.0-alpha.1", default-features = false }
