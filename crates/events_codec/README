@@ -1,0 +1,24 @@
+# radroots_events_codec
+
+This is the README for `radroots_events_codec`, which provides canonical event
+codecs and tag builders for the `radroots` core libraries.
+
+## Overview
+
+ * canonical decoders for event content, tags, job envelopes, profiles, and
+   wire representations;
+ * tag builder helpers for the same event families exposed by
+   `radroots_events`;
+ * parsed view and error types for codec-driven validation and routing;
+ * optional `serde_json` and `radroots_nostr` integration for JSON and wire
+   interop.
+
+## Copyright
+
+Except as otherwise noted, all files in the `radroots_events_codec`
+distribution are
+
+ Copyright (c) 2020-2026 Tyson Lupul and others.
+
+For information on usage and redistribution, and for a DISCLAIMER OF ALL
+WARRANTIES, see LICENSE included in the `radroots_events_codec` distribution.

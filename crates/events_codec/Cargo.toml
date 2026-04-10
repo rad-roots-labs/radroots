@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "canonical encoders and decoders for radroots nostr event payloads"
+description = "Canonical event codecs and tag builders"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_events_codec"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = ["std"]
