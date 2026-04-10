@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "network orchestration primitives and runtime interfaces for the radroots sdk"
+description = "Network orchestration and runtime interfaces"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_net_core"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = ["std"]
