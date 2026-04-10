@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "wasm bindings for radroots event encoding and decoding"
+description = "WebAssembly bindings for radroots-events-codec"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_events_codec_wasm"
-readme.workspace = true
+readme = "README"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
