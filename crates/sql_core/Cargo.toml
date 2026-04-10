@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "sql execution and migration primitives for radroots data layers"
+description = "SQL execution and migration primitives"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_sql_core"
-readme.workspace = true
+readme = "README"
 
 [lib]
 crate-type = ["rlib"]

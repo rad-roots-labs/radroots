@@ -1,0 +1,24 @@
+# radroots_sql_core
+
+This is the README for `radroots_sql_core`, which provides SQL execution and
+migration primitives for the `radroots` core libraries.
+
+## Overview
+
+ * the `SqlExecutor` trait and `ExecOutcome` type used by higher-level database
+   crates;
+ * native SQLite execution and utility support behind the `native` feature;
+ * WebAssembly execution, export locking, and bridge integration for
+   browser-facing builds;
+ * optional embedded-engine support for self-contained runtimes and migration
+   workflows.
+
+## Copyright
+
+Except as otherwise noted, all files in the `radroots_sql_core` distribution
+are
+
+ Copyright (c) 2020-2026 Tyson Lupul and others.
+
+For information on usage and redistribution, and for a DISCLAIMER OF ALL
+WARRANTIES, see LICENSE included in the `radroots_sql_core` distribution.
