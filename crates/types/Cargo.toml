@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "shared api result and error wrapper types for radroots sdk surfaces"
+description = "Shared result and error wrapper types"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_types"
-readme.workspace = true
+readme = "README"
 build = "build.rs"
 
 [features]
