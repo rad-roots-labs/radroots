@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "wasm bindings for replica synchronization interfaces in radroots data layers"
+description = "WebAssembly bindings for radroots-replica-sync"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_replica_sync_wasm"
-readme.workspace = true
+readme = "README"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
