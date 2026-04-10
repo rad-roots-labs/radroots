@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "shared local managed-runtime paths, registry, and lifecycle boundary for radroots"
+description = "Managed runtime registry and path helpers"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_runtime_manager"
-readme = "README.md"
+readme = "README"
 
 [dependencies]
 radroots_runtime_paths = { workspace = true }
