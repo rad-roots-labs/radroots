@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "simplex chat protocol primitives for the radroots sdk"
+description = "SimpleX chat protocol primitives and codecs"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_simplex_chat_proto"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = ["std"]
