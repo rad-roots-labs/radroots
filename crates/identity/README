@@ -1,0 +1,22 @@
+# radroots_identity
+
+This is the README for `radroots_identity`, which provides identity models and
+profile utilities for the `radroots` core libraries.
+
+## Overview
+
+ * public and private identity, profile, file, and identifier types;
+ * username validation, normalization, and parser helpers;
+ * default identity path constants and JSON file support behind feature flags;
+ * optional NIP-49, `secrecy`, `zeroize`, and `ts-rs` support for protected key
+   material and shared model export.
+
+## Copyright
+
+Except as otherwise noted, all files in the `radroots_identity` distribution
+are
+
+ Copyright (c) 2020-2026 Tyson Lupul and others.
+
+For information on usage and redistribution, and for a DISCLAIMER OF ALL
+WARRANTIES, see LICENSE included in the `radroots_identity` distribution.

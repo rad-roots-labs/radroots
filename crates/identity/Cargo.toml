@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "identity model and profile utilities for radroots nostr applications"
+description = "Identity models, username helpers, and profile utilities"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_identity"
-readme.workspace = true
+readme = "README"
 build = "build.rs"
 
 [features]
