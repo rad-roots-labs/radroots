@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "workflow validation projections and read models for radroots trade flows"
+description = "Trade listing projections and validation models"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_trade"
-readme.workspace = true
+readme = "README"
 build = "build.rs"
 
 [features]
