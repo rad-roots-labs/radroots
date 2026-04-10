@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "nostr runtime primitives and orchestration interfaces for the radroots sdk"
+description = "Nostr runtime coordination, subscriptions, and snapshots"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_nostr_runtime"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = ["std", "nostr-client", "rt"]
