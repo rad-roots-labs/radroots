@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "canonical secret backend taxonomy and fail-closed selection policy for radroots runtimes"
+description = "Secret backend selection and wrapping semantics"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_secret_vault"
-readme = "README.md"
+readme = "README"
 
 [features]
 default = []
