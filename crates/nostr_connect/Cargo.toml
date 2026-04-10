@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "nip-46 protocol and uri primitives for the radroots sdk"
+description = "NIP-46 connection, message, and URI models"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_nostr_connect"
-readme.workspace = true
+readme = "README"
 
 [dependencies]
 nostr = { workspace = true }
