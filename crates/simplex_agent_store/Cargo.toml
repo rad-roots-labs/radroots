@@ -8,11 +8,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "simplex agent persistence and queue state for the radroots sdk"
+description = "SimpleX agent queue and delivery persistence models"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_simplex_agent_store"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = ["std"]
