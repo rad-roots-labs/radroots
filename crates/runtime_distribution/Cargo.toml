@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "contract parsing and artifact resolution for modular radroots runtime distribution"
+description = "Runtime distribution contracts and artifact resolution"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_runtime_distribution"
-readme = "README.md"
+readme = "README"
 
 [dependencies]
 serde = { workspace = true, features = ["derive"] }
