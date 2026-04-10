@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "nostr event models, kinds, and tag helpers for radroots integrations"
+description = "Typed event models, kinds, and tag conventions"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_events"
-readme.workspace = true
+readme = "README"
 build = "build.rs"
 
 [features]

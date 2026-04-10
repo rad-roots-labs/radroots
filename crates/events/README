@@ -1,0 +1,24 @@
+# radroots_events
+
+This is the README for `radroots_events`, which provides typed `radroots` event
+models, kinds, and tag conventions for the `radroots` core libraries.
+
+## Overview
+
+ * typed content modules for accounts, app data, comments, coops, documents,
+   farms, jobs, lists, messages, posts, profiles, reactions, trades, and
+   related domains;
+ * shared event references, pointers, and kind and tag definitions used across
+   event-processing code;
+ * portable event model semantics for both `std` and `no_std` builds;
+ * optional integration with `serde`, `typeshare`, and `ts-rs` for
+   serialization and cross-language type export.
+
+## Copyright
+
+Except as otherwise noted, all files in the `radroots_events` distribution are
+
+ Copyright (c) 2020-2026 Tyson Lupul and others.
+
+For information on usage and redistribution, and for a DISCLAIMER OF ALL
+WARRANTIES, see LICENSE included in the `radroots_events` distribution.
