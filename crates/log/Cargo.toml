@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "tracing-based logging primitives for radroots runtime crates"
+description = "Tracing-oriented logging primitives and initializers"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_log"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = ["std"]
