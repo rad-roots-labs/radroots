@@ -1,5 +1,5 @@
 [package]
-name = "radroots-geocoder"
+name = "radroots_geocoder"
 version = "0.1.0-alpha.1"
 edition.workspace = true
 authors = [
@@ -10,7 +10,7 @@ license.workspace = true
 description = "offline geocoder queries for radroots geonames datasets"
 repository.workspace = true
 homepage.workspace = true
-documentation = "https://docs.rs/radroots-geocoder"
+documentation = "https://docs.rs/radroots_geocoder"
 readme.workspace = true
 
 [dependencies]

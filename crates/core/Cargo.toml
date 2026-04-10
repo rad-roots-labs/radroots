@@ -1,5 +1,5 @@
 [package]
-name = "radroots-core"
+name = "radroots_core"
 version = "0.1.0-alpha.1"
 edition.workspace = true
 authors = [
@@ -10,7 +10,7 @@ license.workspace = true
 description = "core value types and unit semantics for radroots sdk contracts"
 repository.workspace = true
 homepage.workspace = true
-documentation = "https://docs.rs/radroots-core"
+documentation = "https://docs.rs/radroots_core"
 readme.workspace = true
 build = "build.rs"
 

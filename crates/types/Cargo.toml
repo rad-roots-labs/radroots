@@ -1,5 +1,5 @@
 [package]
-name = "radroots-types"
+name = "radroots_types"
 version = "0.1.0-alpha.1"
 edition.workspace = true
 authors = [
@@ -10,7 +10,7 @@ license.workspace = true
 description = "shared api result and error wrapper types for radroots sdk surfaces"
 repository.workspace = true
 homepage.workspace = true
-documentation = "https://docs.rs/radroots-types"
+documentation = "https://docs.rs/radroots_types"
 readme.workspace = true
 build = "build.rs"
 

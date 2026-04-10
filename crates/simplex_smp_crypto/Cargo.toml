@@ -1,0 +1,34 @@
+[package]
+name = "radroots_simplex_smp_crypto"
+publish = false
+version = "0.1.0-alpha.1"
+edition.workspace = true
+authors = [
+  "triesap npub1tr33s4tj2le2kk9yzhfphdtss26gyn8kv7savnnjhj794nqp333q8e7grr",
+]
+rust-version.workspace = true
+license.workspace = true
+description = "simplex messaging queue authorization and ratchet state for the radroots sdk"
+repository.workspace = true
+homepage.workspace = true
+documentation = "https://docs.rs/radroots_simplex_smp_crypto"
+readme.workspace = true
+
+[features]
+default = ["std"]
+std = [
+  "ed25519-dalek/std",
+  "getrandom/std",
+  "radroots_simplex_smp_proto/std",
+  "sha2/std",
+  "xsalsa20poly1305/std",
+]
+
+[dependencies]
+ed25519-dalek = { workspace = true, default-features = false, features = ["alloc"] }
+getrandom = { workspace = true, default-features = false }
+hkdf = { workspace = true, default-features = false }
+radroots_simplex_smp_proto = { workspace = true, default-features = false }
+sha2 = { workspace = true, default-features = false }
+xsalsa20poly1305 = { workspace = true, default-features = false }
+x25519-dalek = { workspace = true, default-features = false, features = ["static_secrets"] }

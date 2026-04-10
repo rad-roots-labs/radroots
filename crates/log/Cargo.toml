@@ -1,5 +1,5 @@
 [package]
-name = "radroots-log"
+name = "radroots_log"
 version = "0.1.0-alpha.1"
 edition.workspace = true
 authors = [
@@ -10,7 +10,7 @@ license.workspace = true
 description = "tracing-based logging primitives for radroots runtime crates"
 repository.workspace = true
 homepage.workspace = true
-documentation = "https://docs.rs/radroots-log"
+documentation = "https://docs.rs/radroots_log"
 readme.workspace = true
 
 [features]

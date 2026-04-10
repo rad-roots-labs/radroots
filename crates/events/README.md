@@ -1,4 +1,4 @@
-# radroots-events
+# radroots_events
 
 Nostr event models, kinds, and tag mappings for the Radroots SDK.
 

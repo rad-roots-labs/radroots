@@ -1,4 +1,4 @@
-# radroots-core
+# radroots_core
 
 Core value types and unit semantics for the Radroots SDK.
 

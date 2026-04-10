@@ -1,4 +1,4 @@
-# radroots-log
+# radroots_log
 
 Tracing logging primitives for the Radroots SDK.
 
