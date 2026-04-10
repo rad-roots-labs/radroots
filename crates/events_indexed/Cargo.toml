@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "indexed manifest and checkpoint models for radroots event archives"
+description = "Indexed event shard manifest and checkpoint models"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_events_indexed"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = ["serde", "typeshare"]
