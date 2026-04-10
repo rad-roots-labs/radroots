@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "wasm sql bridge primitives for radroots data layers"
+description = "Host bridge ABI for WebAssembly SQL execution"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_sql_wasm_bridge"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = []
