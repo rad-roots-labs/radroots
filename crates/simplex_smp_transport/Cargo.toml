@@ -8,11 +8,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "simplex messaging transport framing and handshake policy for the radroots sdk"
+description = "SimpleX SMP transport framing and TLS handshake policy"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_simplex_smp_transport"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = ["std"]
