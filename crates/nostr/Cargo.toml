@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "nostr protocol primitives and adapter interfaces for the radroots sdk"
+description = "Shared Nostr protocol primitives and adapters"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_nostr"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = ["std"]

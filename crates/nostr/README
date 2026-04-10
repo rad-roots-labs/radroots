@@ -1,0 +1,22 @@
+# radroots_nostr
+
+This is the README for `radroots_nostr`, which provides shared Nostr protocol
+primitives for the `radroots` core libraries.
+
+## Overview
+
+ * typed filters, tags, events, relay metadata, parsers, and utility helpers;
+ * feature-gated client operations and relay-management helpers for active
+   network use;
+ * adapters between `radroots_events`, `radroots_events_codec`, and Nostr wire
+   representations;
+ * optional NIP-11 and NIP-17 support alongside `std` and `no_std` builds.
+
+## Copyright
+
+Except as otherwise noted, all files in the `radroots_nostr` distribution are
+
+ Copyright (c) 2020-2026 Tyson Lupul and others.
+
+For information on usage and redistribution, and for a DISCLAIMER OF ALL
+WARRANTIES, see LICENSE included in the `radroots_nostr` distribution.
