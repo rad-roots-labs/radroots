@@ -7,11 +7,11 @@ authors = [
 ]
 rust-version.workspace = true
 license.workspace = true
-description = "simplex messaging protocol primitives for the radroots sdk"
+description = "SimpleX SMP wire protocol primitives"
 repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_simplex_smp_proto"
-readme.workspace = true
+readme = "README"
 
 [features]
 default = ["std"]
