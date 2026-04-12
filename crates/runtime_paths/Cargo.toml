@@ -13,4 +13,5 @@ documentation = "https://docs.rs/radroots_runtime_paths"
 readme = "README"
 
 [dependencies]
+serde = { workspace = true, features = ["derive"] }
 thiserror = { workspace = true }
