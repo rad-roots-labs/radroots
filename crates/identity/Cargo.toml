@@ -11,7 +11,6 @@ repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_identity"
 readme = "README"
-build = "build.rs"
 
 [features]
 default = ["std", "profile", "json-file", "nip49"]
@@ -25,7 +24,6 @@ json-file = ["std", "dep:radroots_runtime"]
 nip49 = ["std", "nostr/nip49"]
 secrecy = ["dep:secrecy"]
 zeroize = ["dep:zeroize"]
-ts-rs = ["dep:ts-rs"]
 
 [dependencies]
 radroots_runtime = { workspace = true, optional = true }
@@ -45,7 +43,6 @@ serde = { workspace = true }
 serde_json = { workspace = true }
 thiserror = { workspace = true }
 tracing = { workspace = true }
-ts-rs = { workspace = true, optional = true }
 zeroize = { workspace = true, optional = true }
 
 [dev-dependencies]

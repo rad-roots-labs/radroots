@@ -11,14 +11,11 @@ repository.workspace = true
 homepage.workspace = true
 documentation = "https://docs.rs/radroots_events"
 readme = "README"
-build = "build.rs"
 
 [features]
-default = ["std", "serde", "ts-rs", "typeshare"]
+default = ["std", "serde"]
 std = ["radroots_core/std"]
 serde = ["dep:serde", "radroots_core/serde"]
-ts-rs = ["dep:ts-rs"]
-typeshare = ["dep:typeshare", "radroots_core/typeshare"]
 
 [dependencies]
 radroots_core = { workspace = true, default-features = false }
@@ -26,8 +23,6 @@ serde = { workspace = true, default-features = false, features = [
   "alloc",
   "derive",
 ], optional = true }
-ts-rs = { workspace = true, optional = true }
-typeshare = { workspace = true, optional = true }
 
 [dev-dependencies]
 serde_json = { workspace = true }

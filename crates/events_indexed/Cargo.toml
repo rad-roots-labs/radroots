@@ -13,9 +13,8 @@ documentation = "https://docs.rs/radroots_events_indexed"
 readme = "README"
 
 [features]
-default = ["serde", "typeshare"]
+default = ["serde"]
 serde = ["dep:serde"]
-typeshare = ["dep:typeshare"]
 std = []
 
 [dependencies]
@@ -23,7 +22,6 @@ serde = { workspace = true, default-features = false, features = [
   "alloc",
   "derive",
 ], optional = true }
-typeshare = { workspace = true, optional = true }
 
 [dev-dependencies]
 serde_json = { workspace = true }
