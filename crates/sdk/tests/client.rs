@@ -124,14 +124,14 @@ fn client_allows_custom_relay_without_radrootsd_endpoint() {
     let mut config = RadrootsSdkConfig::custom();
     config.transport = SdkTransportMode::RelayDirect;
     config.relay = RelayConfig {
-        urls: vec!["wss://radroots.net".into()],
+        urls: vec!["wss://radroots.org".into()],
     };
 
     let client = RadrootsSdkClient::from_config(config).expect("relay-only sdk client");
     assert_eq!(
         client.resolved_transport_target(),
         &SdkResolvedTransportTarget::RelayDirect {
-            relay_urls: vec!["wss://radroots.net".to_string()],
+            relay_urls: vec!["wss://radroots.org".to_string()],
         }
     );
 }

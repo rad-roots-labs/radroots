@@ -533,7 +533,7 @@ fn sample_session_view_json(session_id: &str) -> Value {
         "client_pubkey": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
         "signer_pubkey": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
         "user_pubkey": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
-        "relays": ["wss://radroots.net"],
+        "relays": ["wss://radroots.org"],
         "permissions": ["sign_event:30402"],
         "name": "Radroots Signer",
         "url": "https://radroots.net/signers/demo",
@@ -604,7 +604,7 @@ fn sample_bridge_job_json_for(job_id: &str, command: &str, event_kind: u32) -> V
         "attempt_summaries": ["attempt 1: 1/2 relays acknowledged"],
         "relay_results": [
             {
-                "relay_url": "wss://radroots.net",
+                "relay_url": "wss://radroots.org",
                 "acknowledged": true,
                 "detail": null
             },
@@ -631,7 +631,7 @@ async fn connected_bunker_session_handle(
                 "mode": "Bunker",
                 "remote_signer_pubkey": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                 "client_pubkey": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-                "relays": ["wss://radroots.net"]
+                "relays": ["wss://radroots.org"]
             }
         }),
     )
@@ -641,7 +641,7 @@ async fn connected_bunker_session_handle(
         .radrootsd()
         .signer_sessions()
         .connect_bunker(
-            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.net&secret=shared-secret",
+            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.org&secret=shared-secret",
         )
         .await
         .map_err(Into::into)
@@ -706,7 +706,7 @@ fn radrootsd_debug_redacts_signer_session_values() {
     assert!(receipt_debug.contains("<redacted>"));
 
     let connect_request = SdkRadrootsdSignerSessionConnectRequest::nostrconnect(
-        "nostrconnect://bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb?relay=wss%3A%2F%2Fradroots.net&secret=shared-secret",
+        "nostrconnect://bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb?relay=wss%3A%2F%2Fradroots.org&secret=shared-secret",
         "client-secret-key",
     )
     .with_signer_authority(SdkRadrootsdSignerAuthority {
@@ -732,7 +732,7 @@ async fn radrootsd_signer_session_connect_returns_opaque_handle() -> TestResult<
                 "mode": "Nostrconnect",
                 "remote_signer_pubkey": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                 "client_pubkey": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-                "relays": ["wss://radroots.net"]
+                "relays": ["wss://radroots.org"]
             }
         }),
     )
@@ -747,7 +747,7 @@ async fn radrootsd_signer_session_connect_returns_opaque_handle() -> TestResult<
     };
     let client = RadrootsSdkClient::from_config(config)?;
     let request = SdkRadrootsdSignerSessionConnectRequest::nostrconnect(
-        "nostrconnect://bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb?relay=wss%3A%2F%2Fradroots.net&secret=shared-secret",
+        "nostrconnect://bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb?relay=wss%3A%2F%2Fradroots.org&secret=shared-secret",
         "client-secret-key",
     );
 
@@ -761,7 +761,7 @@ async fn radrootsd_signer_session_connect_returns_opaque_handle() -> TestResult<
     assert_eq!(request_json["method"], "nip46.connect");
     assert_eq!(
         request_json["params"]["url"],
-        "nostrconnect://bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb?relay=wss%3A%2F%2Fradroots.net&secret=shared-secret"
+        "nostrconnect://bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb?relay=wss%3A%2F%2Fradroots.org&secret=shared-secret"
     );
     assert_eq!(
         request_json["params"]["client_secret_key"],
@@ -776,7 +776,7 @@ async fn radrootsd_signer_session_connect_returns_opaque_handle() -> TestResult<
         handle.client_pubkey(),
         "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
     );
-    assert_eq!(handle.relays(), &["wss://radroots.net".to_owned()]);
+    assert_eq!(handle.relays(), &["wss://radroots.org".to_owned()]);
 
     let handle_debug = format!("{handle:?}");
     assert!(!handle_debug.contains("session-123"));
@@ -802,7 +802,7 @@ async fn radrootsd_signer_session_connect_bunker_supports_bunker_mode() -> TestR
                 "mode": "Bunker",
                 "remote_signer_pubkey": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                 "client_pubkey": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-                "relays": ["wss://radroots.net"]
+                "relays": ["wss://radroots.org"]
             }
         }),
     )
@@ -813,7 +813,7 @@ async fn radrootsd_signer_session_connect_bunker_supports_bunker_mode() -> TestR
         .radrootsd()
         .signer_sessions()
         .connect_bunker(
-            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.net&secret=shared-secret",
+            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.org&secret=shared-secret",
         )
         .await?;
     let request_json = request_rx.await?;
@@ -821,7 +821,7 @@ async fn radrootsd_signer_session_connect_bunker_supports_bunker_mode() -> TestR
     assert_eq!(request_json["method"], "nip46.connect");
     assert_eq!(
         request_json["params"]["url"],
-        "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.net&secret=shared-secret"
+        "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.org&secret=shared-secret"
     );
     assert!(request_json["params"]["client_secret_key"].is_null());
     assert_eq!(handle.mode(), SdkRadrootsdSignerSessionMode::Bunker);
@@ -841,7 +841,7 @@ async fn radrootsd_signer_session_status_returns_typed_view() -> TestResult<()> 
                 "mode": "Nostrconnect",
                 "remote_signer_pubkey": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                 "client_pubkey": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-                "relays": ["wss://radroots.net"]
+                "relays": ["wss://radroots.org"]
             }
         }),
     )
@@ -851,7 +851,7 @@ async fn radrootsd_signer_session_status_returns_typed_view() -> TestResult<()> 
         .radrootsd()
         .signer_sessions()
         .connect_nostrconnect(
-            "nostrconnect://bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb?relay=wss%3A%2F%2Fradroots.net&secret=shared-secret",
+            "nostrconnect://bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb?relay=wss%3A%2F%2Fradroots.org&secret=shared-secret",
             "client-secret-key",
         )
         .await?;
@@ -892,7 +892,7 @@ async fn radrootsd_signer_session_status_returns_typed_view() -> TestResult<()> 
         session.user_pubkey.as_deref(),
         Some("cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc")
     );
-    assert_eq!(session.relays, vec!["wss://radroots.net".to_owned()]);
+    assert_eq!(session.relays, vec!["wss://radroots.org".to_owned()]);
     assert_eq!(session.permissions, vec!["sign_event:30402".to_owned()]);
     assert_eq!(session.name.as_deref(), Some("Radroots Signer"));
     assert_eq!(
@@ -965,7 +965,7 @@ async fn radrootsd_signer_session_authorize_returns_typed_result() -> TestResult
                 "mode": "Bunker",
                 "remote_signer_pubkey": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                 "client_pubkey": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-                "relays": ["wss://radroots.net"]
+                "relays": ["wss://radroots.org"]
             }
         }),
     )
@@ -975,7 +975,7 @@ async fn radrootsd_signer_session_authorize_returns_typed_result() -> TestResult
         .radrootsd()
         .signer_sessions()
         .connect_bunker(
-            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.net&secret=shared-secret",
+            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.org&secret=shared-secret",
         )
         .await?;
 
@@ -1019,7 +1019,7 @@ async fn radrootsd_signer_session_get_public_key_returns_typed_result() -> TestR
                 "mode": "Bunker",
                 "remote_signer_pubkey": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                 "client_pubkey": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-                "relays": ["wss://radroots.net"]
+                "relays": ["wss://radroots.org"]
             }
         }),
     )
@@ -1029,7 +1029,7 @@ async fn radrootsd_signer_session_get_public_key_returns_typed_result() -> TestR
         .radrootsd()
         .signer_sessions()
         .connect_bunker(
-            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.net&secret=shared-secret",
+            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.org&secret=shared-secret",
         )
         .await?;
 
@@ -1074,7 +1074,7 @@ async fn radrootsd_signer_session_require_auth_returns_typed_result() -> TestRes
                 "mode": "Bunker",
                 "remote_signer_pubkey": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                 "client_pubkey": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-                "relays": ["wss://radroots.net"]
+                "relays": ["wss://radroots.org"]
             }
         }),
     )
@@ -1084,7 +1084,7 @@ async fn radrootsd_signer_session_require_auth_returns_typed_result() -> TestRes
         .radrootsd()
         .signer_sessions()
         .connect_bunker(
-            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.net&secret=shared-secret",
+            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.org&secret=shared-secret",
         )
         .await?;
 
@@ -1130,7 +1130,7 @@ async fn radrootsd_signer_session_close_returns_typed_result() -> TestResult<()>
                 "mode": "Bunker",
                 "remote_signer_pubkey": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                 "client_pubkey": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-                "relays": ["wss://radroots.net"]
+                "relays": ["wss://radroots.org"]
             }
         }),
     )
@@ -1140,7 +1140,7 @@ async fn radrootsd_signer_session_close_returns_typed_result() -> TestResult<()>
         .radrootsd()
         .signer_sessions()
         .connect_bunker(
-            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.net&secret=shared-secret",
+            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.org&secret=shared-secret",
         )
         .await?;
 
@@ -1174,7 +1174,7 @@ async fn radrootsd_signer_session_close_returns_typed_result() -> TestResult<()>
 async fn radrootsd_signer_session_connect_rejects_relay_transport_mode() -> TestResult<()> {
     let client = RadrootsSdkClient::from_config(RadrootsSdkConfig::production())?;
     let request = SdkRadrootsdSignerSessionConnectRequest::bunker(
-        "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.net&secret=shared-secret",
+        "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.org&secret=shared-secret",
     );
 
     let error = client
@@ -1636,7 +1636,7 @@ async fn radrootsd_trade_order_request_publish_accepts_session_handle() -> TestR
         .trade()
         .publish_order_request_via_radrootsd_with_options(
             &sample_trade_order(),
-            &listing_event_ptr_with_relays(Some("wss://radroots.net")),
+            &listing_event_ptr_with_relays(Some("wss://radroots.org")),
             &options,
         )
         .await?;
@@ -1655,7 +1655,7 @@ async fn radrootsd_trade_order_request_publish_accepts_session_handle() -> TestR
     );
     assert_eq!(
         request_json["params"]["listing_event"]["relays"],
-        "wss://radroots.net"
+        "wss://radroots.org"
     );
     assert_eq!(
         request_json["params"]["signer_authority"]["provider_runtime_id"],
@@ -1870,7 +1870,7 @@ async fn radrootsd_sdk_workflow_chains_session_listing_trade_and_bridge_job() ->
                     "mode": "Bunker",
                     "remote_signer_pubkey": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
                     "client_pubkey": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-                    "relays": ["wss://radroots.net"]
+                    "relays": ["wss://radroots.org"]
                 }
             }),
             json!({
@@ -1933,7 +1933,7 @@ async fn radrootsd_sdk_workflow_chains_session_listing_trade_and_bridge_job() ->
         .radrootsd()
         .signer_sessions()
         .connect_bunker(
-            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.net&secret=shared-secret",
+            "bunker://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?relay=wss%3A%2F%2Fradroots.org&secret=shared-secret",
         )
         .await?;
     assert_eq!(handle.mode(), SdkRadrootsdSignerSessionMode::Bunker);
@@ -1956,7 +1956,7 @@ async fn radrootsd_sdk_workflow_chains_session_listing_trade_and_bridge_job() ->
         .trade()
         .publish_order_request_via_radrootsd(
             &sample_trade_order(),
-            &listing_event_ptr_with_relays(Some("wss://radroots.net")),
+            &listing_event_ptr_with_relays(Some("wss://radroots.org")),
             &handle,
         )
         .await?;
@@ -2094,7 +2094,7 @@ async fn radrootsd_bridge_job_status_accepts_typed_job_ref_from_publish_receipt(
     );
     assert_eq!(job_view.attempt_count, 1);
     assert_eq!(job_view.relay_results.len(), 2);
-    assert_eq!(job_view.relay_results[0].relay_url, "wss://radroots.net");
+    assert_eq!(job_view.relay_results[0].relay_url, "wss://radroots.org");
     assert!(job_view.relay_results[0].acknowledged);
 
     Ok(())

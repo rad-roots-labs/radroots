@@ -4,7 +4,7 @@ use core::fmt;
 #[cfg(feature = "std")]
 use std::{env, string::String, vec::Vec};
 
-pub const RADROOTS_SDK_PRODUCTION_RELAY_URL: &str = "wss://radroots.net";
+pub const RADROOTS_SDK_PRODUCTION_RELAY_URL: &str = "wss://radroots.org";
 pub const RADROOTS_SDK_STAGING_RELAY_URL: &str = "wss://staging.radroots.net";
 pub const RADROOTS_SDK_LOCAL_RELAY_URL: &str = "ws://127.0.0.1:8080";
 
