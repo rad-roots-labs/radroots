@@ -23,7 +23,10 @@ std = [
   "serde/std",
   "serde_json/std",
 ]
-web = ["std"]
+web = [
+  "std",
+  "uuid/js",
+]
 bridge = [
   "std",
   "web",
